@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>File upload</title>
+</head>
+<body>
+    <form action="upload" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+       <table>
+           {{form.as_table}}
+           <tr><input type="file" name="file"></tr>
+        </table>
+        <input type="submit" value="Submit" id="Save"/>
+    </form>
+</body>
+</html>
